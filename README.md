@@ -124,6 +124,10 @@ mkcert supports the following root stores:
 
 To only install the local root CA into a subset of them, you can set the `TRUST_STORES` environment variable to a comma-separated list. Options are: "system", "java" and "nss" (includes Firefox).
 
+### Manually-supported root stores
+
+* NixOS Linux: Add to configuration.nix: `security.pki.certificateFiles = [ /home/USER/.local/share/mkcert/rootCA.pem ]; # for local development via SSL`
+
 ## Advanced topics
 
 ### Advanced options
